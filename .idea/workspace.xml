@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1310401d-4d41-4f91-973f-5a411456969b" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/NegativeArraySizeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketPriceComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/MyJavaLessonTickets/TicketTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/NegativeArraySizeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/NegativeArraySizeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/MyJavaLessonTickets/TicketsManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/MyJavaLessonTickets/TicketsManagerTest.java" afterDir="false" />
@@ -21,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -63,7 +67,23 @@
       <command value="mvn clean verify" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TicketsRepositoryTest">
+  <component name="RunManager" selected="JUnit.TicketsManagerTest">
+    <configuration name="TicketTest.compareTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyJavaLessonTickets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.MyJavaLessonTickets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.MyJavaLessonTickets" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.MyJavaLessonTickets.TicketTest" />
+      <option name="METHOD_NAME" value="compareTo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TicketsManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyJavaLessonTickets" />
       <extension name="coverage">
@@ -79,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TicketsManagerTest.shouldNotRemoveByFakeArrivalPort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TicketsManagerTest.shouldFindAllTicketsSame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyJavaLessonTickets" />
       <extension name="coverage">
         <pattern>
@@ -89,7 +109,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.MyJavaLessonTickets" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.MyJavaLessonTickets.TicketsManagerTest" />
-      <option name="METHOD_NAME" value="shouldNotRemoveByFakeArrivalPort" />
+      <option name="METHOD_NAME" value="shouldFindAllTicketsSame" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketsManagerTest.shouldNotFindTicketsWithFakeFromPort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyJavaLessonTickets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.MyJavaLessonTickets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.MyJavaLessonTickets" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.MyJavaLessonTickets.TicketsManagerTest" />
+      <option name="METHOD_NAME" value="shouldNotFindTicketsWithFakeFromPort" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,45 +146,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TicketsRepositoryTest.removeByDeparturePort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyJavaLessonTickets" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.netology.MyJavaLessonTickets.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.netology.MyJavaLessonTickets" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.MyJavaLessonTickets.TicketsRepositoryTest" />
-      <option name="METHOD_NAME" value="removeByDeparturePort" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicketsRepositoryTest.shouldFindByArrivalPort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyJavaLessonTickets" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.netology.MyJavaLessonTickets.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.netology.MyJavaLessonTickets" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.MyJavaLessonTickets.TicketsRepositoryTest" />
-      <option name="METHOD_NAME" value="shouldFindByArrivalPort" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TicketsRepositoryTest" />
         <item itemvalue="JUnit.TicketsManagerTest" />
-        <item itemvalue="JUnit.TicketsRepositoryTest.shouldFindByArrivalPort" />
-        <item itemvalue="JUnit.TicketsRepositoryTest.removeByDeparturePort" />
-        <item itemvalue="JUnit.TicketsManagerTest.shouldNotRemoveByFakeArrivalPort" />
+        <item itemvalue="JUnit.TicketsManagerTest.shouldFindAllTicketsSame" />
+        <item itemvalue="JUnit.TicketTest.compareTo" />
+        <item itemvalue="JUnit.TicketsRepositoryTest" />
+        <item itemvalue="JUnit.TicketsManagerTest.shouldNotFindTicketsWithFakeFromPort" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660290457536</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="First commit">
+      <created>1660398806251</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660398806251</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

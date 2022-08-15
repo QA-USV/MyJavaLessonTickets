@@ -1,42 +1,12 @@
 package ru.netology.MyJavaLessonTickets;
 
+import java.sql.Array;
+import java.util.Arrays;
+
 public class TicketsRepository {
 
     TicketsManager manager;
     private Ticket[] tickets = new Ticket[0];
-
-
-    public Ticket findById(int id) {
-        for (Ticket ticket : tickets) {
-            if (ticket.getId() == id) {
-                return ticket;
-            }
-        }
-        return null;
-    }
-
-//    public Ticket[] findByArrivalPort(String city) {
-//        Ticket[] result = new Ticket[0];
-//        for (Ticket ticket : findAll()) {
-//            if (ticket.getArrivalPort().equals(city)){
-//                Ticket[] tmp = new Ticket[result.length + 1];
-//                for (int i = 0; i < result.length; i++) {
-//                    tmp[i] = result[i];
-//                }
-//                tmp[tmp.length - 1] = ticket;
-//                result = tmp;
-//            }
-//        }
-//        return result;
-//    }
-//
-//    public boolean matches2 (Ticket ticket, String search){
-//        if (ticket.getArrivalPort().contains(search)) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
 
     public void add(Ticket ticket) {
         Ticket[] tmp = new Ticket[tickets.length + 1];
@@ -57,6 +27,15 @@ public class TicketsRepository {
         tickets = tmp;
     }
 
+    public Ticket findById(int id) {
+        for (Ticket ticket : tickets) {
+            if (ticket.getId() == id) {
+                return ticket;
+            }
+        }
+        return null;
+    }
+
     public void removeByIdTicket(int id) {
         if (findById(id) == null) {
             throw new NotFoundException(
@@ -74,40 +53,39 @@ public class TicketsRepository {
         }
     }
 
-    public void removeByArrivalPort(String city) {
-        if (manager.findByArrivalPort(city) == null) {
-            throw new NotFoundException(
-                    "Airport " + city + " not found."
-            );
-        }
-        Ticket[] tmp = new Ticket[tickets.length - 1];
-        int index = 0;
-        for (Ticket ticket : tickets) {
-            if (ticket.getArrivalPort() != city) {
-                tmp[index] = ticket;
-                index++;
-            }
-            tickets = tmp;
-        }
-    }
-
-    public void removeByDeparturePort(String city) {
-        if (manager.findByDeparturePort(city) == null) {
-            throw new NotFoundException(
-                    "Airport " + city + " not found."
-            );
-        }
-        Ticket[] tmp = new Ticket[tickets.length - 1];
-        int index = 0;
-        for (Ticket ticket : tickets) {
-            if (ticket.getDeparturePort() != city) {
-                tmp[index] = ticket;
-                index++;
-            }
-            tickets = tmp;
-        }
-    }
-
+//    public void removeByArrivalPort(String city) {
+//        if (manager.findByArrivalPort(city) == null) {
+//            throw new NotFoundException(
+//                    "Airport " + city + " not found."
+//            );
+//        }
+//        Ticket[] tmp = new Ticket[tickets.length - 1];
+//        int index = 0;
+//        for (Ticket ticket : tickets) {
+//            if (ticket.getArrivalPort() != city) {
+//                tmp[index] = ticket;
+//                index++;
+//            }
+//            tickets = tmp;
+//        }
+//    }
+//
+//    public void removeByDeparturePort(String city) {
+//        if (manager.findByDeparturePort(city) == null) {
+//            throw new NotFoundException(
+//                    "Airport " + city + " not found."
+//            );
+//        }
+//        Ticket[] tmp = new Ticket[tickets.length - 1];
+//        int index = 0;
+//        for (Ticket ticket : tickets) {
+//            if (ticket.getDeparturePort() != city) {
+//                tmp[index] = ticket;
+//                index++;
+//            }
+//            tickets = tmp;
+//        }
+//    }
     public Ticket[] findAll() {
         return tickets;
     }
