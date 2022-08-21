@@ -1,11 +1,8 @@
 package ru.netology.MyJavaLessonTickets;
 
-import java.sql.Array;
-import java.util.Arrays;
-
 public class TicketsRepository {
 
-    TicketsManager manager;
+//    TicketsManager manager;
     private Ticket[] tickets = new Ticket[0];
 
     public void add(Ticket ticket) {
@@ -20,8 +17,10 @@ public class TicketsRepository {
                     "Ticket id must be more then zero."
             );
         }
-        for (int i = 0; i < tickets.length; i++) {
+        int i = 0;
+        while (i < tickets.length) {
             tmp[i] = tickets[i];
+            i++;
         }
         tmp[tmp.length - 1] = ticket;
         tickets = tmp;
@@ -53,39 +52,6 @@ public class TicketsRepository {
         }
     }
 
-//    public void removeByArrivalPort(String city) {
-//        if (manager.findByArrivalPort(city) == null) {
-//            throw new NotFoundException(
-//                    "Airport " + city + " not found."
-//            );
-//        }
-//        Ticket[] tmp = new Ticket[tickets.length - 1];
-//        int index = 0;
-//        for (Ticket ticket : tickets) {
-//            if (ticket.getArrivalPort() != city) {
-//                tmp[index] = ticket;
-//                index++;
-//            }
-//            tickets = tmp;
-//        }
-//    }
-//
-//    public void removeByDeparturePort(String city) {
-//        if (manager.findByDeparturePort(city) == null) {
-//            throw new NotFoundException(
-//                    "Airport " + city + " not found."
-//            );
-//        }
-//        Ticket[] tmp = new Ticket[tickets.length - 1];
-//        int index = 0;
-//        for (Ticket ticket : tickets) {
-//            if (ticket.getDeparturePort() != city) {
-//                tmp[index] = ticket;
-//                index++;
-//            }
-//            tickets = tmp;
-//        }
-//    }
     public Ticket[] findAll() {
         return tickets;
     }

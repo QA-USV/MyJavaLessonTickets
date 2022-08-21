@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1310401d-4d41-4f91-973f-5a411456969b" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketPriceComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/MyJavaLessonTickets/TicketTest.java" afterDir="false" />
+    <list default="true" id="1310401d-4d41-4f91-973f-5a411456969b" name="Changes" comment="Second commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/NegativeArraySizeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/NegativeArraySizeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/NegativeArraySizeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/NotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketPriceComparator.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/MyJavaLessonTickets/TicketsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/MyJavaLessonTickets/TicketsManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/MyJavaLessonTickets/TicketsManagerTest.java" afterDir="false" />
@@ -40,17 +40,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_directory_selection": "D:/QAEngineer/QAJavaLessons/MyJavaLessonTickets/src/test/java",
-    "last_opened_file_path": "D:/QAEngineer/QAJavaLessons/MyJavaLessonProduct"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/QAEngineer/QAJavaLessons/MyJavaLessonTickets/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/QAEngineer/QAJavaLessons/MyJavaLessonTournament&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -67,7 +67,7 @@
       <command value="mvn clean verify" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TicketsManagerTest">
+  <component name="RunManager" selected="JUnit.TicketsRepositoryTest">
     <configuration name="TicketTest.compareTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyJavaLessonTickets" />
       <extension name="coverage">
@@ -148,10 +148,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TicketsRepositoryTest" />
         <item itemvalue="JUnit.TicketsManagerTest" />
         <item itemvalue="JUnit.TicketsManagerTest.shouldFindAllTicketsSame" />
         <item itemvalue="JUnit.TicketTest.compareTo" />
-        <item itemvalue="JUnit.TicketsRepositoryTest" />
         <item itemvalue="JUnit.TicketsManagerTest.shouldNotFindTicketsWithFakeFromPort" />
       </list>
     </recent_temporary>
@@ -193,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660398806251</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="First commit">
+      <created>1660597055481</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660597055481</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +216,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
   </component>
 </project>

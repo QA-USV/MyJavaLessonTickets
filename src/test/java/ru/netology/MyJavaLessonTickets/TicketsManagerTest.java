@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 public class TicketsManagerTest {
 
     TicketsRepository repo = new TicketsRepository();
@@ -43,42 +41,6 @@ public class TicketsManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-//    @Test
-//    public void shouldSortByDeparturePort() {
-//
-//        Ticket[] expected = {ticket1, ticket3, ticket2};
-//        Ticket[] actual = manager.findByDeparturePort("Moscow");
-//
-//        Assertions.assertArrayEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void shouldNotFindByFakeDeparturePort() {
-//
-//        Ticket[] expected = {};
-//        Ticket[] actual = manager.findByDeparturePort("London");
-//
-//        Assertions.assertArrayEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void shouldSortByArrivalPort() {
-//
-//        Ticket[] expected = {ticket4, ticket5, ticket3};
-//        Ticket[] actual = manager.findByArrivalPort("Yekaterinburg");
-//
-//        Assertions.assertArrayEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void shouldNotFindByFakeArrivalPort() {
-//
-//        Ticket[] expected = {};
-//        Ticket[] actual = manager.findByArrivalPort("Vladivostok");
-//
-//        Assertions.assertArrayEquals(expected, actual);
-//    }
-
     @Test
     public void shouldFindAllTicketsFromAndTo() {
 
@@ -96,8 +58,6 @@ public class TicketsManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
-
-
 
     @Test
     public void shouldFindAllTickets() {

@@ -35,14 +35,7 @@ public class TicketsRepositoryTest {
 
         Assertions.assertThrows(UnacceptableException.class, () -> repo.add(ticket5));
     }
-//    @BeforeEach
-//    public void addTickets() {
-//        repo.add(ticket1);
-//        repo.add(ticket2);
-//        repo.add(ticket3);
-//        repo.add(ticket4);
-//    }
-//
+
     @Test
     public void shouldFindAll() {
 
@@ -60,17 +53,7 @@ public class TicketsRepositoryTest {
 
         Assertions.assertArrayEquals(expected, new Ticket[]{actual});
     }
-//    @Test
-//    public void shouldFindByArrivalPort() {
-//        repo.add(ticket1);
-//        repo.add(ticket2);
-//        repo.add(ticket3);
-//        repo.add(ticket4);
-//
-//        Ticket[] expected = {ticket3, ticket4};
-//        Ticket[] actual = repo.findByArrivalPort("Yekaterinburg");
-//        Assertions.assertArrayEquals(expected, actual);
-//    }
+
     @Test
     public void shouldAddTickets() {
 
@@ -96,31 +79,4 @@ public class TicketsRepositoryTest {
 
       Assertions.assertThrows(NotFoundException.class, () -> repo.removeByIdTicket(6));
     }
-//    @Test
-//    public void shouldRemoveByArrivalPort() {
-//        repo.add(ticket1);
-//        repo.add(ticket2);
-//        repo.add(ticket3);
-//        repo.add(ticket4);
-//        repo.removeByArrivalPort("Kazan");
-//
-//        Ticket[] expected = {ticket3, ticket4};
-//        Ticket[] actual = repo.findAll();
-//
-//        Assertions.assertArrayEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void removeByDeparturePort() {
-//        repo.add(ticket1);
-//        repo.add(ticket2);
-//        repo.add(ticket3);
-//        repo.add(ticket4);
-//        repo.removeByDeparturePort("Moscow");
-//
-//        Ticket[] expected = {ticket4};
-//        Ticket[] actual = repo.findAll();
-//
-//        Assertions.assertArrayEquals(expected, actual);
-//    }
 }
