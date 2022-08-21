@@ -44,8 +44,17 @@ public class TicketsManagerTest {
     @Test
     public void shouldFindAllTicketsFromAndTo() {
 
+        Ticket[] expected = {ticket3};
+        Ticket[] actual = manager.findTicketsFromAndTo("Moscow", "Chelyabinsk");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindOnlyOneResultTicketsFromAndTo() {
+
         Ticket[] expected = {ticket1, ticket2};
-        Ticket[] actual = manager.findAllTickets("Moscow", "Kazan");
+        Ticket[] actual = manager.findTicketsFromAndTo("Moscow", "Kazan");
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -54,7 +63,7 @@ public class TicketsManagerTest {
     public void shouldFindAllTicketsSame() {
 
         Ticket[] expected = {ticket4, ticket5};
-        Ticket[] actual = manager.findAllTickets("New York", "Yekaterinburg");
+        Ticket[] actual = manager.findTicketsFromAndTo("New York", "Yekaterinburg");
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -64,6 +73,15 @@ public class TicketsManagerTest {
 
         Ticket[] expected = {ticket1, ticket2, ticket3, ticket4, ticket5};
         Ticket[] actual = repo.findAll();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotFindTickets() {
+
+        Ticket[] expected = {};
+        Ticket[] actual = manager.findTicketsFromAndTo ("Moscow", "Yekaterinburg");
 
         Assertions.assertArrayEquals(expected, actual);
     }

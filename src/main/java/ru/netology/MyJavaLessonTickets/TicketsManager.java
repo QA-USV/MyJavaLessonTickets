@@ -1,12 +1,11 @@
 package ru.netology.MyJavaLessonTickets;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public abstract class TicketsManager implements Comparable<Ticket> {
 
     TicketsRepository repo;
-
-//    private Ticket[] tickets = new Ticket[0];
 
     public TicketsManager(TicketsRepository repo) {
         this.repo = repo;
@@ -16,10 +15,10 @@ public abstract class TicketsManager implements Comparable<Ticket> {
         repo.add(ticket);
     }
 
-    public Ticket[] findAllTickets(String fromPort, String toPort) {
+    public Ticket[] findTicketsFromAndTo(String fromPort, String toPort) {
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : repo.findAll()) {
-            if ((matches1(ticket, fromPort)) && (matches2(ticket, toPort))) {
+            if ((ticket.getDeparturePort().matches(fromPort)) && (ticket.getArrivalPort().matches(toPort))) {
                 Ticket[] tmp = new Ticket[result.length + 1];
                 int i = 0;
                 while (i < result.length) {
@@ -32,13 +31,5 @@ public abstract class TicketsManager implements Comparable<Ticket> {
         }
         Arrays.sort(result);
         return result;
-    }
-
-    private boolean matches1(Ticket ticket, String search) {
-        return ticket.getDeparturePort().contains(search);
-    }
-
-    private boolean matches2(Ticket ticket, String search) {
-        return ticket.getArrivalPort().contains(search);
     }
 }
